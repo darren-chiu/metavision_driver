@@ -24,7 +24,7 @@ static const std::map<std::string, std::map<std::string, BiasParameter>> biasPar
      {"bias_diff_off", {100, 234, "off threshold level"}},
      {"bias_fo", {1250, 1800, "source follower low pass filter"}},
      {"bias_hpf", {900, 1800, "differentiator high pass filter"}},
-     {"bias_pr", {0, 1800, "photoreceptor (frontend) bias"}},
+    //  {"bias_pr", {0, 1800, "photoreceptor (frontend) bias"}},
      {"bias_refr", {1300, 1800, "refractory time bias"}}}},
    {"4.1",
     {{"bias_diff_on", {95, 140, "on threshold level"}},

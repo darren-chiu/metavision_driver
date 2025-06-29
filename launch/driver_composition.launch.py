@@ -34,7 +34,7 @@ def launch_setup(context, *args, **kwargs):
     pkg_name = "metavision_driver"
     share_dir = get_package_share_directory(pkg_name)
     trigger_config = os.path.join(share_dir, "config", "trigger_pins.yaml")
-    bias_config = os.path.join(share_dir, "config", "silky_ev_cam.bias")
+    bias_config = os.path.join(share_dir, "config", "genx320.bias")
     container = ComposableNodeContainer(
         name="metavision_driver_container",
         namespace="",

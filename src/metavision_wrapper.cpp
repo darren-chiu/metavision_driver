@@ -319,10 +319,13 @@ bool MetavisionWrapper::initializeCamera()
         const auto cfg = Metavision::FileConfigHints().real_time_playback(true);
         cam_ = Metavision::Camera::from_file(fromFile_, cfg);
       } else {
+        Metavision::DeviceConfig cfg;
+        cfg.set_format("EVT3");
+
         if (!serialNumber_.empty()) {
-          cam_ = Metavision::Camera::from_serial(serialNumber_);
+          cam_ = Metavision::Camera::from_serial(serialNumber_, cfg);
         } else {
-          cam_ = Metavision::Camera::from_first_available();
+          cam_ = Metavision::Camera::from_first_available(cfg);
         }
       }
       break;  // were able to open the camera, exit the for loop
